@@ -8,12 +8,17 @@
     "start": "next start",
     "lint": "eslint",
     "unit-test": "jest --passWithNoTests",
-    "unit-test:watch": "jest --passWithNoTests --watch"
+    "unit-test:watch": "jest --passWithNoTests --watch",
+    "e2e-test": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
+    "e2e-test:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "component-test": "npx cypress open --component",
+    "component-test:headless": "cypress run --component"
   },
   "dependencies": {
     "next": "15.5.4",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "start-server-and-test": "^2.1.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -25,6 +30,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^15.3.0",
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "jest": "^30.2.0",
