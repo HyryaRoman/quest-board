@@ -1,6 +1,7 @@
 name: Component tests
 
 on:
+  push:
   pull_request:
     branches: [ "main" ]
 
