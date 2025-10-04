@@ -1,13 +1,15 @@
 import '@testing-library/jest-dom'
 import { render, screen } from '@testing-library/react'
 import Page from '@/app/page'
+import { expect } from '@jest/globals'
 
 describe('Home page', () => {
   it('renders a header', () => {
-    // [Arrange] On the rendered page,
-    render(<Page />)
-
-    // [Act] with no action required
+    // [Arrange] On home page,
+    const page = <Page />
+    
+    // [Act] when it's rendered,
+    render(page)
     
     // [Assert] header should be present and visible
     const header = screen.getByRole('banner')
@@ -16,10 +18,11 @@ describe('Home page', () => {
   })
 
   it('renders main content', () => {
-    // [Arrange] On the rendered page,
-    render(<Page />)
-
-    // [Act] with no action required
+    // [Arrange] On home page,
+    const page = <Page />
+    
+    // [Act] when it's rendered,
+    render(page)
     
     // [Assert] main content should be present and visible
     const main = screen.getByRole('main')
@@ -28,10 +31,11 @@ describe('Home page', () => {
   })
 
   it('renders a footer', () => {
-    // [Arrange] On the rendered page,
-    render(<Page />)
-
-    // [Act] with no action required
+    // [Arrange] On home page,
+    const page = <Page />
+    
+    // [Act] when it's rendered,
+    render(page)
     
     // [Assert] footer should be present and visible
     const footer = screen.getByRole('contentinfo')
