@@ -8,6 +8,7 @@ export default defineConfig({
   },
 
   component: {
+    specPattern: ["**/__tests__/**/?(*.)component.?([mc])[jt]s?(x)"],
     devServer: {
       framework: "next",
       bundler: "webpack",
